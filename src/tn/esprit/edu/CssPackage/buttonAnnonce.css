@@ -1,0 +1,32 @@
+#btnpublier {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-style: none; 
+    -fx-background-radius: 0;
+    -fx-border-color : #f4f4f4;
+    -fx-border-width:2;
+    -fx-background-color: #2b579a;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+
+#btnupload {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-style: none; 
+    -fx-background-radius: 0;
+    -fx-border-color : #f4f4f4;
+    -fx-border-width:2;
+    -fx-background-color: #2b579a;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+.button{
+	    -fx-border-width:2;
+	    -fx-padding: 5 22 5 22;   
+	
+}

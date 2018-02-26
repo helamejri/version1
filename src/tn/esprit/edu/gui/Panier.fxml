@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.edu.controllers.PanierController">
+    <children>
+        <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" pickOnBounds="false" prefHeight="684.0" prefWidth="1234.0" snapToPixel="true"
+                    style="-fx-border-color: #2b579a; -fx-background-color: white;" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+
+                <AnchorPane layoutX="1.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                            minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="207.0"
+                            style="-fx-background-color: #2b579a;" AnchorPane.bottomAnchor="6.0"
+                            AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-3.0">
+                    <children>
+                        <ListView fx:id="listMenuOfGestion" layoutY="95.0" prefHeight="590.0" prefWidth="207.0"
+                                  stylesheets="@../CssPackage/listView.css" AnchorPane.bottomAnchor="-6.0"
+                                  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="95.0"/>
+                        <Button id="ButtonBack" fx:id="btnBack" layoutX="52.0" layoutY="22.0" mnemonicParsing="false"
+                                onAction="#back" prefHeight="65.0" prefWidth="69.0">
+                            <graphic>
+                                <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Ressources/arrowLeft.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <stylesheets>
+                                <URL value="@../CssPackage/buttonCircle.css"/>
+                            </stylesheets>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="210.0" layoutY="18.0" prefHeight="65.0" prefWidth="1023.0">
+                    <children>
+                        <Text fx:id="userconnecte" fill="#057bd7" layoutX="534.0" layoutY="52.0"
+                              nodeOrientation="RIGHT_TO_LEFT" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="Souilem Mariem" wrappingWidth="406.0546875">
+                            <font>
+                                <Font name="Segoe UI Light" size="44.0"/>
+                            </font>
+                        </Text>
+                        <ImageView fx:id="LBimguser" fitHeight="34.0" fitWidth="41.0" layoutX="955.0" layoutY="20.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Ressources/usernewwhite.PNG"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="imgLoad" fitHeight="33.0" fitWidth="40.0" layoutX="330.0" layoutY="17.0"
+                                   pickOnBounds="true" preserveRatio="true" visible="false">
+                            <image>
+                                <Image url="@../Ressources/loading.gif"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="modif" layoutX="216.0" layoutY="487.0" prefHeight="186.0" prefWidth="1009.0">
+                    <children>
+                        <Button id="suppBtn" fx:id="supprimer" layoutX="879.0" layoutY="137.0" mnemonicParsing="false"
+                                onAction="#suppr" prefHeight="27.0" prefWidth="116.0"
+                                stylesheets="@../CssPackage/login.css" text="Supprimer"/>
+                        <Label fx:id="details" layoutX="14.0" layoutY="8.0" prefHeight="165.0" prefWidth="207.0"/>
+                        <ImageView fx:id="image" fitHeight="165.0" fitWidth="200.0" layoutX="335.0" layoutY="7.0"
+                                   pickOnBounds="true" preserveRatio="true"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="paneadduser1" layoutX="216.0" layoutY="83.0" maxHeight="-Infinity"
+                            maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0"
+                            prefWidth="1016.0" style="-fx-background-color: #ffff;"
+                            stylesheets="@../CssPackage/Metro-UI.css">
+                    <children>
+                        <HBox id="HBox" layoutX="-1.0" layoutY="55.0" prefHeight="346.0" prefWidth="1016.0"
+                              spacing="5.0">
+                            <children>
+                                <TableView id="tableprod" fx:id="tableprod" fixedCellSize="0.0" prefHeight="346.0"
+                                           prefWidth="1018.0">
+                                    <columns>
+                                        <TableColumn id="idProduit" fx:id="idProduiti" prefWidth="47.0" text="N°">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="idProduit"/>
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn fx:id="vendeur" prefWidth="116.0" text="Vendeur">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="user"/>
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn fx:id="statut" prefWidth="144.0" text="Statut du produit">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="etatProduit"/>
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn fx:id="dateajout" prefWidth="169.0" text="Date d'ajout">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="dateajout"/>
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn fx:id="categoriecolumn" prefWidth="182.0" text="Categorie">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="categorie"/>
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn fx:id="descriptioncolumn" prefWidth="355.0" text="Description">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="descriptionProduit"/>
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </HBox>
+                        <ComboBox fx:id="selecttri" layoutX="748.0" layoutY="14.0" onAction="#triproduit"
+                                  prefHeight="30.0" prefWidth="268.0" promptText="Selectionnez votre choix"
+                                  stylesheets="@../CssPackage/listView.css"/>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+        <Label fx:id="lblClose" layoutX="1213.0" layoutY="6.0" text="X" textFill="#057bd7">
+            <font>
+                <Font name="Arial Black" size="15.0"/>
+            </font>
+        </Label>
+        <ProgressBar fx:id="bar" layoutX="221.0" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                     minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="990.0" progress="0.0"
+                     stylesheets="@../CssPackage/login.css"/>
+    </children>
+</AnchorPane>

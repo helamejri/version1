@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="statmodel">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/tn/esprit/edu/libs/statmodel.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/src/tn/esprit/edu/libs/statmodel.jar!/" />
+    </SOURCES>
+  </library>
+</component>

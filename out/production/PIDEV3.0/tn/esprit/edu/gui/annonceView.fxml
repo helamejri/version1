@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="AnnoncePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="301.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.edu.controllers.AnnonceViewController">
+   <children>
+      <Pane fx:id="pane" layoutX="14.0" layoutY="14.0" prefHeight="69.0" prefWidth="467.0" />
+      <TextField layoutX="106.0" layoutY="213.0" prefHeight="30.0" prefWidth="382.0" />
+      <Pane layoutX="106.0" layoutY="94.0" prefHeight="119.0" prefWidth="382.0" />
+      <Button layoutX="396.0" layoutY="243.0" mnemonicParsing="false" text="Commenter" />
+   </children>
+</AnchorPane>
